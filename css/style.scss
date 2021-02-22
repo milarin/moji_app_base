@@ -69,6 +69,10 @@ img {
   }
 }
 
+.detail-image:hover {
+  opacity: 1;
+}
+
 
 
 @supports (display: grid) {

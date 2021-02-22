@@ -75,6 +75,10 @@ img {
   margin-right: 2rem;
 }
 
+.detail-image:hover {
+  opacity: 1;
+}
+
 @supports (display: grid) {
   .gallery {
     display: -ms-grid;
