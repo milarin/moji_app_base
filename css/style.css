@@ -156,11 +156,6 @@ input[type="text"] {
   margin-left: 2rem;
 }
 
-.profile-settings-btn {
-  font-size: 2rem;
-  margin-left: 1rem;
-}
-
 .profile-stats {
   margin-top: 2.3rem;
 }
@@ -204,10 +199,99 @@ input[type="text"] {
   outline: 0.5rem auto #4d90fe;
 }
 
+.icon {
+  position: fixed;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: #00e1ff;
+  border-radius: 50%;
+  bottom: 30px;
+  right: 30px;
+}
+
+.icon::before, .icon--plus::after {
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-top: 2px solid #fff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.icon--plus:after {
+  top: 11px;
+  left: -9px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 @media screen and (max-width: 40rem) {
   input[type="text"] {
     max-width: 100%;
     padding: 5px;
+  }
+  .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 4rem 0;
+  }
+  .profile::after {
+    display: none;
+  }
+  .profile-image {
+    margin-right: 3rem;
+  }
+  .profile-image,
+  .profile-user-settings,
+  .profile-bio,
+  .profile-stats {
+    float: none;
+    width: auto;
+  }
+  .profile-image img {
+    width: 10rem;
+  }
+  .profile-user-settings {
+    -ms-flex-preferred-size: calc(100% - 15rem);
+        flex-basis: calc(100% - 15rem);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .profile-user-name {
+    font-size: 2.2rem;
+  }
+  .profile-edit-btn {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .profile-edit-btn {
+    margin-left: 0;
+  }
+  .profile-bio {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
+  .profile-edit-btn,
+  .profile-bio,
+  .profile-stats {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
